@@ -15,8 +15,8 @@ int main()
     do{
 	if (Player==1){
         do{
-            printf("[ТВОЙ ХОД,НА СТОЛЕ  %d СПИЧЕК]\n", Count);
-            printf("[СКОЛЬКО СПИЧЕК ВОЗЬМЁШЬ ?]\n");
+            printf("Твой ход на столе %d спичек\n", Count);
+            printf("Сколько спичек возьмешь? \n");
             scanf("%d", &Num);
             if((Num>=1) && (Num<=10) && (Num<=Count)){
                     Correct=true;}
@@ -24,7 +24,7 @@ int main()
             {
                 //rewind(stdin);
                 //printf("%d \n", Num);
-                printf("[НЕТ, МОЖНО ВЗЯТЬ ОТ 1 ДО 10 !]\n");
+                printf("Можно взять только от 1 до 10! \n");
      
                 Correct=false;
             }
@@ -35,7 +35,7 @@ int main()
           Num=rand()%10+1;
           if (Num>Count){
             Num=Count;}
-          printf("[МОЙ ХОД, Я БЕРУ %d СПИЧЕК]\n", Num);
+          printf("Компьютер берет %d спичек\n", Num);
         }while (!Correct);
         }
         
@@ -47,8 +47,8 @@ int main()
     }
     while (Count>0);
     if (Player==2){
-        printf("!!! ТЫ ВЫЙГРАЛ !!!\n");}
-    else {printf("ТЫ ПРОИГРАЛ, ЛОХ НАФИК, НЕ ПЕРЕЖИВАЙ, СЛЕДУЮЩИЙ РАЗ ПОВЕЗЁТ )))\n");}
+        printf("Ты выйграл\n");}
+    else {printf("Я взял последнюю спичку, ты проиграл\n");}
      
 return 0;
 }
